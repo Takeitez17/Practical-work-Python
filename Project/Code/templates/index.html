@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if current_user.is_authenticated %}
+    <div class="registration-cssave">
+        <form action="" method="post">
+            <h1 class="t1">Работа нейронной сети</h1>
+            {{form.hidden_tag()}}
+            <h4 class="t1">{{ form.desc.label }}</h4>
+            <div action="" method="post" class="d1">{{ form.desc(class="form-control") }}
+                {% for error in form.desc.errors %}
+                    <p class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </p>
+                {% endfor %}
+            </div>
+            <div>{{ form.submit(type="submit", class="btn btn-primary") }}</div></br>
+            <h4 class="t1">{{ form.answer.label }}</h4>
+            <div action="" method="get">{{form.answer}}</div>
+        </form>
+    </div>
+{% endif %}
+{% endblock %}

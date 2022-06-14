@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='1.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<a class="navbar-brand" href="#">Наше приложение</a>
+			{% if current_user.is_authenticated %}
+				<a class="logout" href="/logout">{{ current_user.name }}</a>
+			{% else %}
+				<p>
+					<a class="reg-log" href="/register">Зарегистрироваться</a>
+					<a class="reg-log" href="/login">Войти</a>
+				</p>
+			{% endif %}
+		</nav>
+	</header>
+	<!-- Begin page content -->
+	<main role="main" class="container">
+		{% block content %}{% endblock %}
+	</main>
+</body>
+</html>

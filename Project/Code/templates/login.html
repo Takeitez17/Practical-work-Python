@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="registration-cssave">
+        <form action="" method="post">
+            {{form.hidden_tag()}}
+            <h1 class="t1">Авторизация</h1>
+            <h4 class="t1">{{ form.email.label }}</h4>
+            <div class="d1">{{ form.email(class="form-control", type="email") }}
+                {% for error in form.email.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+                {% endfor %}
+            </div>
+            <h4 class="text1">{{ form.password.label }}</h4>
+            <div class="d1">
+                {{ form.password(class="form-control", type="password") }}
+                {% for error in form.password.errors %}
+                    <p class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </p>
+                    {% endfor %}
+            </div>
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+            <div>{{ message }}</div>
+        </form>
+    </div>
+{% endblock %}

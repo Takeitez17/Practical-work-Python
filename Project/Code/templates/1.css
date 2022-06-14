@@ -1,0 +1,123 @@
+html {
+  background-color:#AAD2A7;
+  background-blend-mode:overlay;
+  background-image:url(img/3.gif);
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:100%;
+}
+header{
+}
+
+.container{
+	margin-top:30px;
+	display:flex;
+	align-items:center;
+}
+
+
+body {
+  margin:0;
+  padding:0;
+  background-color:transparent;
+}
+
+main{
+}
+
+nav{
+	display:flex;
+	align-items: center;
+}
+
+.navbar{
+	background: linear-gradient(to bottom right,#E1AF70, pink);
+	position: relative;
+}
+
+.navbar-brand{
+  text-decoration:none;
+  color: black;
+  font-size:40px;
+  font-family: Georgia, serif;
+  font-weight:bold;
+}
+
+
+p{
+  margin-left: auto;
+  padding:0;
+  display: flex;
+}
+.navbar .reg-log {
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  border: none;
+  border-radius:30px;
+  padding:8px 15px;
+  font-size:12px;
+  font-weight:bold;
+  background-color:black;
+  border:none;
+  color:white;
+}
+.navbar .logout{
+    margin-left: auto;
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+	text-decoration:none;
+    color: black;
+    font-size:40px;
+    font-family: Georgia, serif;
+    font-weight:bold;
+}
+
+.container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.registration-cssave{
+  padding:50px 0;
+}
+
+.registration-cssave form{
+  max-width:800px;
+  padding:50px 70px;
+  border-radius:10px;
+  box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
+  background-color:#fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.registration-cssave .t1 {
+  font-weight:bold;
+  color:black;
+  font-family: Georgia, serif;
+}
+
+.registration-cssave .submit {
+
+  padding:10px 20px;
+  border:none;
+  margin-top:20px;
+}
+
+
+.email {
+  border-radius:30px;
+  padding:10px 20px;
+  font-size:18px;
+  font-weight:bold;
+  background-color:#3f93ff;
+  border:none;
+  color:white;
+  margin-top:20px;
+}
+
+
+
